@@ -4,14 +4,20 @@ import java.util.Random;
 
 public class GameController
 {
-//	private int Tie;
-//	private int Win;
-//	private int Loose;
+
+//	private int getTie;
+//	private int getLoose;
+//	private int getWin;
+//	
 //	private int score()
 //	{
+//		getLoose = 0;
+//		getTie = 1;
+//		getWin = 2;
+//		
+//		
 //		
 //		return 0;
-//		
 //	}
 	public void start()
 	{
@@ -102,7 +108,7 @@ public class GameController
 	         if (computerPlay.equalsIgnoreCase("Paper")) 
 	         System.out.println("You making money cause, You win!!"); 
 	    /**
-	     * |Scissor| vs. |Paper|
+	     * |Scissor| vs. |Rock|
 	     */
 	    else if (computerPlay.equalsIgnoreCase("Rock")) 
 	            System.out.println("You blew it. You lose!!"); 
@@ -163,9 +169,11 @@ public class GameController
 
 	    if (personPlay.equalsIgnoreCase(computerPlay)) 
 	       System.out.println("Wow you chose the same thing as the computer"); 
+	    	
 	    else if (personPlay.equalsIgnoreCase("Rock")) 
 	       if (computerPlay.equalsIgnoreCase("Scissors")) 
 	          System.out.println("Rock destroys Scissors. You win!!");
+	    		
 	    else if (computerPlay.equalsIgnoreCase("Paper")) 
 	            System.out.println("Paper can cover rock of course. You lose!!"); 
 	    else if (personPlay.equalsIgnoreCase("Paper")) 
@@ -180,18 +188,19 @@ public class GameController
 	            System.out.println("You blew it. You lose!!"); 
 	    else 
 	    	System.out.println("Bye have good time");
-		 System.out.println("Again? Yes/No");
+	    
+			System.out.println("Again? Yes/No");
+		 
 		    personPlay = scan.next();
+		    
 		    if(personPlay.equalsIgnoreCase("yes"))
 		    {
 		    	secondTime();
 		    }
-		    		
-		    	
-		    	else
-		    	{
-		    		System.out.println("Bye have good time");
-		    	}
+		   	else
+		    {
+		    	System.out.println("Bye have good time");
+		    }
 		  
 		    return computerPlay; 
 	}
